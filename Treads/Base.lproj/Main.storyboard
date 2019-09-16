@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJ8-Eb-q3q">
                                 <rect key="frame" x="350" y="379" width="58" height="58"/>
                                 <state key="normal" image="centerNavButton"/>
+                                <connections>
+                                    <action selector="locationCenterBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ee0-XL-fKW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jex-Fr-l40">
                                 <rect key="frame" x="157" y="661" width="100" height="18"/>
@@ -78,6 +81,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIcon" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mapView" destination="tVO-M7-5EM" id="wws-Jy-8CV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="359.51086956521743"/>
         </scene>
-        <!--View Controller-->
+        <!--CurrentVC-->
         <scene sceneID="A0E-Bt-68W">
             <objects>
-                <viewController id="hMV-o8-GKr" sceneMemberID="viewController">
+                <viewController id="hMV-o8-GKr" customClass="CurrentVC" customModule="Treads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hme-Ox-M9w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +288,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunOutline" translatesAutoresizingMaskIntoConstraints="NO" id="azi-Xo-JpX">
                                 <rect key="frame" x="65" y="621" width="232" height="75"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxe-3k-xdQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxe-3k-xdQ">
                                 <rect key="frame" x="274" y="621" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
                             </button>
@@ -312,7 +318,7 @@
                             <constraint firstItem="wSy-YO-ucG" firstAttribute="leading" secondItem="T0z-kd-FF6" secondAttribute="leading" id="MJq-P5-TLd"/>
                             <constraint firstItem="azi-Xo-JpX" firstAttribute="centerX" secondItem="hme-Ox-M9w" secondAttribute="centerX" constant="-26" id="OiJ-iX-I9U"/>
                             <constraint firstItem="FlF-3I-4OW" firstAttribute="centerX" secondItem="hme-Ox-M9w" secondAttribute="centerX" id="PO4-hG-zuK"/>
-                            <constraint firstItem="bxe-3k-xdQ" firstAttribute="leading" secondItem="azi-Xo-JpX" secondAttribute="trailing" constant="-6" id="TbY-8R-hXj"/>
+                            <constraint firstItem="bxe-3k-xdQ" firstAttribute="leading" secondItem="azi-Xo-JpX" secondAttribute="trailing" constant="-23" id="TbY-8R-hXj"/>
                             <constraint firstItem="j6I-c9-HRd" firstAttribute="top" secondItem="hme-Ox-M9w" secondAttribute="top" id="VQh-Cj-YcP"/>
                             <constraint firstItem="azi-Xo-JpX" firstAttribute="leading" secondItem="cWA-zX-TfI" secondAttribute="trailing" constant="-64.5" id="Vnr-B0-qEA"/>
                             <constraint firstItem="fmX-s1-1iH" firstAttribute="centerY" secondItem="azi-Xo-JpX" secondAttribute="centerY" id="aRe-f6-0fc"/>

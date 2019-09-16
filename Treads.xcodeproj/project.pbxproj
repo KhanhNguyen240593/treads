@@ -31,6 +31,8 @@
 		8BCA4137232F507E0076CCAA /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA4125232F507E0076CCAA /* Montserrat-SemiBold.ttf */; };
 		8BCA4138232F507E0076CCAA /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA4126232F507E0076CCAA /* Montserrat-Thin.ttf */; };
 		8BCA4139232F507E0076CCAA /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA4127232F507E0076CCAA /* Montserrat-SemiBoldItalic.ttf */; };
+		8BCA413B232F6BD60076CCAA /* CurrentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA413A232F6BD60076CCAA /* CurrentVC.swift */; };
+		8BCA413D232F7E970076CCAA /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA413C232F7E970076CCAA /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		8BCA4125232F507E0076CCAA /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		8BCA4126232F507E0076CCAA /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		8BCA4127232F507E0076CCAA /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8BCA413A232F6BD60076CCAA /* CurrentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVC.swift; sourceTree = "<group>"; };
+		8BCA413C232F7E970076CCAA /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +153,10 @@
 		8BCA4113232F4F8F0076CCAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8BCA413C232F7E970076CCAA /* LocationVC.swift */,
 				8BCA40FE232F4D550076CCAA /* BeginRunVC.swift */,
 				8BCA4100232F4D550076CCAA /* RunLogVC.swift */,
+				8BCA413A232F6BD60076CCAA /* CurrentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCA413D232F7E970076CCAA /* LocationVC.swift in Sources */,
 				8BCA4101232F4D550076CCAA /* RunLogVC.swift in Sources */,
 				8BCA40FD232F4D550076CCAA /* AppDelegate.swift in Sources */,
+				8BCA413B232F6BD60076CCAA /* CurrentVC.swift in Sources */,
 				8BCA40FF232F4D550076CCAA /* BeginRunVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
