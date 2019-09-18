@@ -292,15 +292,15 @@
                                 <rect key="frame" x="274" y="621" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-zX-TfI">
-                                <rect key="frame" x="72.666666666666671" y="630" width="57.000000000000014" height="57"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmX-s1-1iH">
                                 <rect key="frame" x="169.66666666666666" y="648.66666666666663" width="78.666666666666657" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-zX-TfI">
+                                <rect key="frame" x="72.666666666666671" y="630" width="57.000000000000014" height="57"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -332,6 +332,10 @@
                         <viewLayoutGuide key="safeArea" id="T0z-kd-FF6"/>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sliderImageView" destination="cWA-zX-TfI" id="YS1-8A-MG3"/>
+                        <outlet property="swipeBGImageView" destination="azi-Xo-JpX" id="2So-fQ-cDR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xx-I5-fr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

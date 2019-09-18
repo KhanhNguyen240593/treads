@@ -23,7 +23,7 @@ class BeginRunVC: LocationVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        manager?.delegate = self as? CLLocationManagerDelegate
+        manager?.delegate = self as CLLocationManagerDelegate
         manager?.startUpdatingLocation()
     }
     
