@@ -33,6 +33,7 @@
 		8BCA4139232F507E0076CCAA /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BCA4127232F507E0076CCAA /* Montserrat-SemiBoldItalic.ttf */; };
 		8BCA413B232F6BD60076CCAA /* CurrentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA413A232F6BD60076CCAA /* CurrentVC.swift */; };
 		8BCA413D232F7E970076CCAA /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA413C232F7E970076CCAA /* LocationVC.swift */; };
+		8BD764B42337A5E900EBFB42 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD764B32337A5E900EBFB42 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		8BCA4127232F507E0076CCAA /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8BCA413A232F6BD60076CCAA /* CurrentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVC.swift; sourceTree = "<group>"; };
 		8BCA413C232F7E970076CCAA /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		8BD764B32337A5E900EBFB42 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +98,11 @@
 		8BCA40FB232F4D550076CCAA /* Treads */ = {
 			isa = PBXGroup;
 			children = (
+				8BD764B22337A5D100EBFB42 /* View */,
+				8BD764B12337A5BC00EBFB42 /* Extension */,
 				8BCA4115232F4FA00076CCAA /* Model */,
-				8BCA4114232F4F9B0076CCAA /* View */,
 				8BCA4113232F4F8F0076CCAA /* Controller */,
 				8BCA4112232F4F850076CCAA /* Utilities */,
-				8BCA4111232F4F7D0076CCAA /* Extensions */,
 				8BCA4110232F4F6F0076CCAA /* Resources */,
 				8BCA40FC232F4D550076CCAA /* AppDelegate.swift */,
 				8BCA4102232F4D550076CCAA /* Main.storyboard */,
@@ -136,13 +138,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8BCA4111232F4F7D0076CCAA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		8BCA4112232F4F850076CCAA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,18 +156,26 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		8BCA4114232F4F9B0076CCAA /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		8BCA4115232F4FA00076CCAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8BD764B12337A5BC00EBFB42 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8BD764B32337A5E900EBFB42 /* Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8BD764B22337A5D100EBFB42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BCA413D232F7E970076CCAA /* LocationVC.swift in Sources */,
+				8BD764B42337A5E900EBFB42 /* Extensions.swift in Sources */,
 				8BCA4101232F4D550076CCAA /* RunLogVC.swift in Sources */,
 				8BCA40FD232F4D550076CCAA /* AppDelegate.swift in Sources */,
 				8BCA413B232F6BD60076CCAA /* CurrentVC.swift in Sources */,
