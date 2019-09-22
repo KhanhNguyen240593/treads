@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import MapKit
 
 class CurrentVC: LocationVC {
 
     @IBOutlet weak var swipeBGImageView: UIImageView!
-    
-    
     @IBOutlet weak var sliderImageView: UIImageView!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var pauseBtn: UIButton!
+    
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
+    
+    var runDistance = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +30,27 @@ class CurrentVC: LocationVC {
         sliderImageView.addGestureRecognizer(swipeGesture)
         sliderImageView.isUserInteractionEnabled = true
         swipeGesture.delegate = self as? UIGestureRecognizerDelegate
+    }
+    
+    // MARK: VIEW WILL APPEAR
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        manager?.delegate = self
+        manager?.distanceFilter = 10
+        startRun()
+        
+    }
+    
+    func startRun() {
+        manager?.startUpdatingLocation()
+    }
+    
+    func endRun() {
+        manager?.stopUpdatingLocation()
+    }
+    
+    
+    @IBAction func pauseBtnPressed(_ sender: Any) {
     }
     
     @objc func endRunSwipe(sender: UIPanGestureRecognizer) {
@@ -46,4 +76,22 @@ class CurrentVC: LocationVC {
         }
     }
     
+}
+
+extension CurrentVC : CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+             checkLocationAuthStatus()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startLocation == nil {
+            startLocation = locations.first
+        } else if let location = locations.last {
+            runDistance += lastLocation.distance(from: location)
+            distanceLabel.text = "\(runDistance)"
+        }
+        lastLocation = locations.last
+    }
 }
